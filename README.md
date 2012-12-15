@@ -19,3 +19,5 @@ $ ./sbt
 > compile
 > deploy
 ```
+
+Visit [http://atmosphere.jelastic.servint.net/](http://atmosphere.jelastic.servint.net/).
