@@ -16,7 +16,6 @@ If `browse` doesn't launch your browser, manually open [http://localhost:8080/](
 ```sh
 $ cd atmosphere-compat
 $ ./sbt
-> compile
 > deploy
 ```
 
