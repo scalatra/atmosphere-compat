@@ -25,13 +25,13 @@ resolvers += "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/reposi
 
 seq(jelasticSettings:_*)
 
-email in deploy := sys.env.get("JELASTIC_USERNAME").getOrElse(
-  sys error "Please export JELASTIC_USERNAME in your shell!"
-)
+email in deploy := sys.env.get("JELASTIC_USERNAME").orElse(
+  sys.env.get("JENKINS_URL")
+).getOrElse(sys error "Please export JELASTIC_USERNAME in your shell!")
 
-password in deploy := sys.env.get("JELASTIC_PWD").getOrElse(
-  sys error "Please export JELASTIC_PWD in your shell!"
-)
+password in deploy := sys.env.get("JELASTIC_PWD").orElse(
+  sys.env.get("JENKINS_URL")
+).getOrElse(sys error "Please export JELASTIC_PWD in your shell!")
 
 apiHoster := "app.jelastic.servint.net"
 
