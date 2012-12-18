@@ -1,5 +1,7 @@
 # atmosphere-compat #
 
+[![Build Status](http://ci.yuvimasory.com/job/atmosphere-compat/badge/icon)](http://ci.yuvimasory.com/job/atmosphere-compat/)
+
 ## Build & run ##
 
 ```sh
